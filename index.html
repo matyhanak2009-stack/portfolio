@@ -51,7 +51,6 @@
             border-radius: 24px;
             overflow: hidden;
             height: 100%;
-            /* Odstraněna animace posunu, ponechán pouze jemný vzhled */
         }
 
         .project-img-wrapper {
@@ -65,7 +64,6 @@
             transition: transform 0.5s ease;
         }
 
-        /* Jemný zoom při najetí na kartu pro vizuální efekt */
         .project-card:hover img {
             transform: scale(1.03);
         }
@@ -122,6 +120,14 @@
             padding: 50px 0;
             opacity: 0.7;
         }
+
+        .category-heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -147,11 +153,64 @@
 
 <section id="projects" class="pb-5">
     <div class="container">
+
+        <h2 class="category-heading">Grafické práce</h2>
+        <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card shadow-sm">
+                    <div class="project-img-wrapper">
+                        <img src="img/grafika1.jpg" alt="Digitální Ilustrace">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge badge-tech">Photoshop</span>
+                            <span class="badge badge-tech">Ilustrace</span>
+                        </div>
+                        <h4 class="fw-bold">Digitální Ilustrace</h4>
+                        <p class="text-secondary small mb-0">Série ilustrací pro online kampaň.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card shadow-sm">
+                    <div class="project-img-wrapper">
+                        <img src="img/grafika2.jpg" alt="Branding & Logo Design">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge badge-tech">Illustrator</span>
+                            <span class="badge badge-tech">Branding</span>
+                        </div>
+                        <h4 class="fw-bold">Branding & Logo Design</h4>
+                        <p class="text-secondary small mb-0">Kompletní vizuální identita pro start-up.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card shadow-sm">
+                    <div class="project-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1596548484180-2d93e54ce699?auto=format&fit=crop&w=800&q=80" alt="Produktový Poster">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge badge-tech">InDesign</span>
+                            <span class="badge badge-tech">Tisk</span>
+                        </div>
+                        <h4 class="fw-bold">Produktový Poster</h4>
+                        <p class="text-secondary small mb-0">Návrh a sazba tiskového plakátu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="category-heading">Webové Projekty</h2>
         <div class="row g-4">
             <div class="col-md-6 col-lg-4">
                 <div class="project-card shadow-sm">
                     <div class="project-img-wrapper">
-                        <img src="img/projekt1.jpg" alt="Crypto Dashboard">
+                        <img src="img/web1.jpg" alt="Crypto Dashboard">
                     </div>
                     <div class="card-body p-4">
                         <div class="mb-2">
@@ -167,7 +226,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="project-card shadow-sm">
                     <div class="project-img-wrapper">
-                        <img src="img/projekt2.jpg" alt="Eco Landing Page">
+                        <img src="img/web2.jpg" alt="Eco Landing Page">
                     </div>
                     <div class="card-body p-4">
                         <div class="mb-2">
@@ -183,7 +242,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="project-card shadow-sm">
                     <div class="project-img-wrapper">
-                        <img src="img/projekt3.jpg" alt="E-commerce řešení">
+                        <img src="img/web3.jpg" alt="E-commerce řešení">
                     </div>
                     <div class="card-body p-4">
                         <div class="mb-2">
@@ -199,7 +258,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="project-card shadow-sm">
                     <div class="project-img-wrapper">
-                        <img src="img/projekt4.jpg" alt="Data Analytics Tool">
+                        <img src="img/web4.jpg" alt="Data Analytics Tool">
                     </div>
                     <div class="card-body p-4">
                         <div class="mb-2">
@@ -215,7 +274,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="project-card shadow-sm">
                     <div class="project-img-wrapper">
-                        <img src="img/projekt5.jpg" alt="Travel Blog">
+                        <img src="img/web5.jpg" alt="Travel Blog">
                     </div>
                     <div class="card-body p-4">
                         <div class="mb-2">
