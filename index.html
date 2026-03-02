@@ -23,14 +23,12 @@
             scroll-behavior: smooth;
         }
 
-        /* --- NAVIGATION --- */
         .navbar {
             background: rgba(5, 10, 10, 0.8) !important;
             backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* --- HERO SECTION --- */
         .hero {
             padding: 160px 0 80px 0;
             background: radial-gradient(circle at top right, rgba(0, 255, 204, 0.1), transparent);
@@ -44,7 +42,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* --- PROJECTS GRID --- */
         .project-card {
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -77,7 +74,6 @@
             margin-right: 5px;
         }
 
-        /* --- ABOUT MINI --- */
         .about-mini {
             background: rgba(255,255,255,0.02);
             padding: 60px 0;
@@ -85,7 +81,6 @@
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* --- FORM --- */
         .btn-accent {
             background: var(--accent-color);
             color: #000;
@@ -146,7 +141,7 @@
         <span class="badge rounded-pill bg-dark border border-secondary mb-3 px-3 py-2 text-uppercase">Kreativní Vývojář</span>
         <h1>Moje Projekty</h1>
         <p class="lead text-secondary mx-auto mt-3" style="max-width: 600px;">
-            Zde je vizuální přehled mých prací. Zaměřuji se na čistotu, funkčnost a moderní technologie.
+            Zde je přehled mých prací napříč vývojem, grafikou a 3D světem.
         </p>
     </div>
 </section>
@@ -180,10 +175,9 @@
                     <div class="card-body p-4">
                         <div class="mb-2">
                             <span class="badge badge-tech">Illustrator</span>
-                            <span class="badge badge-tech">Branding</span>
                         </div>
                         <h4 class="fw-bold">Branding & Logo Design</h4>
-                        <p class="text-secondary small mb-0">Kompletní vizuální identita pro start-up.</p>
+                        <p class="text-secondary small mb-0">Kompletní vizuální identita.</p>
                     </div>
                 </div>
             </div>
@@ -196,7 +190,6 @@
                     <div class="card-body p-4">
                         <div class="mb-2">
                             <span class="badge badge-tech">InDesign</span>
-                            <span class="badge badge-tech">Tisk</span>
                         </div>
                         <h4 class="fw-bold">Produktový Poster</h4>
                         <p class="text-secondary small mb-0">Návrh a sazba tiskového plakátu.</p>
@@ -205,9 +198,44 @@
             </div>
         </div>
 
+        <h2 class="category-heading">3D Modelování</h2>
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="project-card shadow-sm">
+                    <div class="project-img-wrapper">
+                        <img src="img/3d_projekt1.jpg" alt="Environment Design">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge badge-tech">Blender</span>
+                            <span class="badge badge-tech">Cycles</span>
+                        </div>
+                        <h4 class="fw-bold">Environment Design</h4>
+                        <p class="text-secondary small mb-0">Návrh 3D prostředí pro herní scénu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="project-card shadow-sm">
+                    <div class="project-img-wrapper">
+                        <img src="img/3d_projekt2.jpg" alt="Produktová vizualizace">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge badge-tech">Cinema 4D</span>
+                            <span class="badge badge-tech">Octane</span>
+                        </div>
+                        <h4 class="fw-bold">Produktová vizualizace</h4>
+                        <p class="text-secondary small mb-0">Fotorealistický render produktu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <h2 class="category-heading">Webové Projekty</h2>
         <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6">
                 <div class="project-card shadow-sm">
                     <div class="project-img-wrapper">
                         <img src="img/web1.jpg" alt="Crypto Dashboard">
@@ -215,73 +243,24 @@
                     <div class="card-body p-4">
                         <div class="mb-2">
                             <span class="badge badge-tech">React</span>
-                            <span class="badge badge-tech">API</span>
                         </div>
                         <h4 class="fw-bold">Crypto Dashboard</h4>
-                        <p class="text-secondary small mb-0">Real-time sledování kryptoměn s interaktivními grafy.</p>
+                        <p class="text-secondary small mb-0">Real-time sledování kryptoměn.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6">
                 <div class="project-card shadow-sm">
                     <div class="project-img-wrapper">
                         <img src="img/web2.jpg" alt="Eco Landing Page">
                     </div>
                     <div class="card-body p-4">
                         <div class="mb-2">
-                            <span class="badge badge-tech">UI/UX</span>
                             <span class="badge badge-tech">Bootstrap</span>
                         </div>
                         <h4 class="fw-bold">Eco Landing Page</h4>
-                        <p class="text-secondary small mb-0">Čistý, udržitelný design pro ekologický startup.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="project-card shadow-sm">
-                    <div class="project-img-wrapper">
-                        <img src="img/web3.jpg" alt="E-commerce řešení">
-                    </div>
-                    <div class="card-body p-4">
-                        <div class="mb-2">
-                            <span class="badge badge-tech">Next.js</span>
-                            <span class="badge badge-tech">Stripe</span>
-                        </div>
-                        <h4 class="fw-bold">E-commerce řešení</h4>
-                        <p class="text-secondary small mb-0">Kompletní prodejní platforma s platební bránou.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="project-card shadow-sm">
-                    <div class="project-img-wrapper">
-                        <img src="img/obr1">
-                    </div>
-                    <div class="card-body p-4">
-                        <div class="mb-2">
-                            <span class="badge badge-tech">SASS</span>
-                            <span class="badge badge-tech">JS</span>
-                        </div>
-                        <h4 class="fw-bold">Data Analytics Tool</h4>
-                        <p class="text-secondary small mb-0">Vizualizace firemních dat v přehledných tabulkách.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-6 col-lg-4">
-                <div class="project-card shadow-sm">
-                    <div class="project-img-wrapper">
-                        <img src="img/web5.jpg" alt="Travel Blog">
-                    </div>
-                    <div class="card-body p-4">
-                        <div class="mb-2">
-                            <span class="badge badge-tech">WordPress</span>
-                        </div>
-                        <h4 class="fw-bold">Travel Blog</h4>
-                        <p class="text-secondary small mb-0">Custom šablona pro cestovatelský portál.</p>
+                        <p class="text-secondary small mb-0">Moderní landing page pro startup.</p>
                     </div>
                 </div>
             </div>
@@ -295,8 +274,7 @@
             <div class="col-md-8">
                 <h3 class="fw-bold mb-4">Krátce o mně</h3>
                 <p class="text-secondary">
-                    Jsem vývojář, který věří, že kód by měl být stejně krásný jako design. 
-                    Mám 5 let zkušeností a pracoval jsem pro klienty z celého světa. 
+                    Jsem vývojář a designer, který miluje propojování světů kódu a vizuálního umění.
                 </p>
                 <div class="d-flex justify-content-center gap-4 mt-4">
                     <div class="text-center">
@@ -305,7 +283,7 @@
                     </div>
                     <div class="text-center">
                         <h4 class="fw-bold text-info">100%</h4>
-                        <small class="text-secondary">Spokojenost</small>
+                        <small class="text-secondary">Nasazení</small>
                     </div>
                 </div>
             </div>
@@ -343,9 +321,8 @@
         <div class="mb-3">
             <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-github"></i></a>
             <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-linkedin"></i></a>
-            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-twitter-x"></i></a>
         </div>
-        <p class="small text-secondary">© 2026 Vaše Jméno. Všechna práva vyhrazena.</p>
+        <p class="small text-secondary">© 2026 Portfolio. Všechna práva vyhrazena.</p>
     </div>
 </footer>
 
