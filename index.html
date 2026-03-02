@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Moje Práce</title>
+    <title>Portfolio | Galerie Projektů</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -50,14 +50,8 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
             overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             height: 100%;
-        }
-
-        .project-card:hover {
-            transform: translateY(-12px);
-            border-color: var(--accent-color);
-            box-shadow: 0 20px 40px rgba(0, 255, 204, 0.15);
+            /* Odstraněna animace posunu, ponechán pouze jemný vzhled */
         }
 
         .project-img-wrapper {
@@ -66,11 +60,14 @@
         }
 
         .project-card img {
+            width: 100%;
+            display: block;
             transition: transform 0.5s ease;
         }
 
+        /* Jemný zoom při najetí na kartu pro vizuální efekt */
         .project-card:hover img {
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
 
         .badge-tech {
@@ -82,20 +79,6 @@
             margin-right: 5px;
         }
 
-        .btn-accent {
-            background: var(--accent-color);
-            color: #000;
-            font-weight: 700;
-            border-radius: 12px;
-            padding: 10px 25px;
-            transition: 0.3s;
-        }
-
-        .btn-accent:hover {
-            background: #fff;
-            transform: scale(1.05);
-        }
-
         /* --- ABOUT MINI --- */
         .about-mini {
             background: rgba(255,255,255,0.02);
@@ -105,6 +88,21 @@
         }
 
         /* --- FORM --- */
+        .btn-accent {
+            background: var(--accent-color);
+            color: #000;
+            font-weight: 700;
+            border-radius: 12px;
+            padding: 10px 25px;
+            transition: 0.3s;
+            border: none;
+        }
+
+        .btn-accent:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+
         .form-control {
             background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.1);
@@ -132,7 +130,7 @@
     <div class="container">
         <a class="navbar-brand fw-bold" href="#">PORTFOLIO.</a>
         <div class="ms-auto">
-            <a href="#contact" class="btn btn-outline-light btn-sm rounded-pill px-4">Napište mi</a>
+            <a href="#contact" class="btn btn-outline-light btn-sm rounded-pill px-4 text-decoration-none">Napište mi</a>
         </div>
     </div>
 </nav>
@@ -142,7 +140,7 @@
         <span class="badge rounded-pill bg-dark border border-secondary mb-3 px-3 py-2 text-uppercase">Kreativní Vývojář</span>
         <h1>Moje Projekty</h1>
         <p class="lead text-secondary mx-auto mt-3" style="max-width: 600px;">
-            Specializuji se na tvorbu moderních webových aplikací. Zde je výběr mých nejlepších prací za poslední rok.
+            Zde je vizuální přehled mých prací. Zaměřuji se na čistotu, funkčnost a moderní technologie.
         </p>
     </div>
 </section>
@@ -151,9 +149,9 @@
     <div class="container">
         <div class="row g-4">
             <div class="col-md-6 col-lg-4">
-                <div class="project-card">
+                <div class="project-card shadow-sm">
                     <div class="project-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Project 1">
+                        <img src="img/projekt1.jpg" alt="Crypto Dashboard">
                     </div>
                     <div class="card-body p-4">
                         <div class="mb-2">
@@ -161,16 +159,15 @@
                             <span class="badge badge-tech">API</span>
                         </div>
                         <h4 class="fw-bold">Crypto Dashboard</h4>
-                        <p class="text-secondary small">Real-time sledování kryptoměn s interaktivními grafy a notifikacemi.</p>
-                        <a href="#" class="btn btn-accent w-100 mt-3">Detail projektu</a>
+                        <p class="text-secondary small mb-0">Real-time sledování kryptoměn s interaktivními grafy.</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="project-card">
+                <div class="project-card shadow-sm">
                     <div class="project-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Project 2">
+                        <img src="img/projekt2.jpg" alt="Eco Landing Page">
                     </div>
                     <div class="card-body p-4">
                         <div class="mb-2">
@@ -178,16 +175,15 @@
                             <span class="badge badge-tech">Bootstrap</span>
                         </div>
                         <h4 class="fw-bold">Eco Landing Page</h4>
-                        <p class="text-secondary small">Čistý, udržitelný design pro startup zaměřený na ekologii.</p>
-                        <a href="#" class="btn btn-accent w-100 mt-3">Detail projektu</a>
+                        <p class="text-secondary small mb-0">Čistý, udržitelný design pro ekologický startup.</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="project-card">
+                <div class="project-card shadow-sm">
                     <div class="project-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Project 3">
+                        <img src="img/projekt3.jpg" alt="E-commerce řešení">
                     </div>
                     <div class="card-body p-4">
                         <div class="mb-2">
@@ -195,16 +191,15 @@
                             <span class="badge badge-tech">Stripe</span>
                         </div>
                         <h4 class="fw-bold">E-commerce řešení</h4>
-                        <p class="text-secondary small">Kompletní e-shopová platforma s integrovanou platební bránou.</p>
-                        <a href="#" class="btn btn-accent w-100 mt-3">Detail projektu</a>
+                        <p class="text-secondary small mb-0">Kompletní prodejní platforma s platební bránou.</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="project-card">
+                <div class="project-card shadow-sm">
                     <div class="project-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1551288049-bbbda536639a?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Project 4">
+                        <img src="img/projekt4.jpg" alt="Data Analytics Tool">
                     </div>
                     <div class="card-body p-4">
                         <div class="mb-2">
@@ -212,24 +207,22 @@
                             <span class="badge badge-tech">JS</span>
                         </div>
                         <h4 class="fw-bold">Data Analytics Tool</h4>
-                        <p class="text-secondary small">Nástroj pro vizualizaci firemních dat v přehledných tabulkách.</p>
-                        <a href="#" class="btn btn-accent w-100 mt-3">Detail projektu</a>
+                        <p class="text-secondary small mb-0">Vizualizace firemních dat v přehledných tabulkách.</p>
                     </div>
                 </div>
             </div>
             
             <div class="col-md-6 col-lg-4">
-                <div class="project-card">
+                <div class="project-card shadow-sm">
                     <div class="project-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Project 5">
+                        <img src="img/projekt5.jpg" alt="Travel Blog">
                     </div>
                     <div class="card-body p-4">
                         <div class="mb-2">
                             <span class="badge badge-tech">WordPress</span>
                         </div>
                         <h4 class="fw-bold">Travel Blog</h4>
-                        <p class="text-secondary small">Custom šablona pro cestovatelský portál s mapami.</p>
-                        <a href="#" class="btn btn-accent w-100 mt-3">Detail projektu</a>
+                        <p class="text-secondary small mb-0">Custom šablona pro cestovatelský portál.</p>
                     </div>
                 </div>
             </div>
@@ -245,11 +238,10 @@
                 <p class="text-secondary">
                     Jsem vývojář, který věří, že kód by měl být stejně krásný jako design. 
                     Mám 5 let zkušeností a pracoval jsem pro klienty z celého světa. 
-                    Mým cílem je tvořit weby, které nejsou jen hezké, ale hlavně funkční.
                 </p>
                 <div class="d-flex justify-content-center gap-4 mt-4">
                     <div class="text-center">
-                        <h4 class="fw-bold var(--accent-color)">15+</h4>
+                        <h4 class="fw-bold" style="color: var(--accent-color)">15+</h4>
                         <small class="text-secondary">Projektů</small>
                     </div>
                     <div class="text-center">
