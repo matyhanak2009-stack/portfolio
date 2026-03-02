@@ -3,227 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje Portfolio</title>
+    <title>Portfolio | Moje Práce</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --accent-color: #00ffcc;
+            --bg-dark: #050a0a;
+            --card-bg: rgba(255, 255, 255, 0.03);
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0f2027;
-            color: #eafafa;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: #f8f9fa;
             scroll-behavior: smooth;
         }
 
+        /* --- NAVIGATION --- */
         .navbar {
-            background: rgba(0, 40, 44, 0.9) !important;
-            backdrop-filter: blur(10px);
+            background: rgba(5, 10, 10, 0.8) !important;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .navbar-brand {
-            letter-spacing: 1px;
-        }
-
+        /* --- HERO SECTION --- */
         .hero {
-            background: linear-gradient(135deg, #003c3c, #005f5f);
-            padding: 120px 0;
-        }
-
-        .hero img {
-            width: 170px;
-            height: 170px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #00d4c4;
-            box-shadow: 0 0 25px rgba(0, 212, 196, 0.5);
+            padding: 160px 0 80px 0;
+            background: radial-gradient(circle at top right, rgba(0, 255, 204, 0.1), transparent);
         }
 
         .hero h1 {
-            font-weight: 700;
-            font-size: 2.8rem;
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #fff, var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .btn-custom {
-            background-color: #00d4c4;
-            border: none;
-            color: #003333;
-            font-weight: 600;
-            padding: 12px 28px;
-            border-radius: 30px;
+        /* --- PROJECTS GRID --- */
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-12px);
+            border-color: var(--accent-color);
+            box-shadow: 0 20px 40px rgba(0, 255, 204, 0.15);
+        }
+
+        .project-img-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card img {
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .badge-tech {
+            background: rgba(0, 255, 204, 0.1);
+            color: var(--accent-color);
+            border: 1px solid rgba(0, 255, 204, 0.3);
+            font-size: 0.75rem;
+            border-radius: 8px;
+            margin-right: 5px;
+        }
+
+        .btn-accent {
+            background: var(--accent-color);
+            color: #000;
+            font-weight: 700;
+            border-radius: 12px;
+            padding: 10px 25px;
             transition: 0.3s;
         }
 
-        .btn-custom:hover {
-            background-color: #00b3a6;
-            transform: translateY(-3px);
+        .btn-accent:hover {
+            background: #fff;
+            transform: scale(1.05);
         }
 
-        /* SECTIONS */
-        .section-padding {
-            padding: 100px 0;
+        /* --- ABOUT MINI --- */
+        .about-mini {
+            background: rgba(255,255,255,0.02);
+            padding: 60px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            border: none;
-            backdrop-filter: blur(12px);
-            border-radius: 20px;
-            transition: 0.4s;
-            color: white;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 212, 196, 0.2);
-        }
-
-        /* PROGRESS */
-        .progress {
-            height: 25px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 20px;
-        }
-
-        .progress-bar {
-            background: linear-gradient(90deg, #00d4c4, #00a89c);
-            font-weight: 500;
-        }
-
-        /* CONTACT FORM */
+        /* --- FORM --- */
         .form-control {
-            background-color: rgba(255,255,255,0.08);
-            border: none;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
             color: white;
-            padding: 12px;
-            border-radius: 12px;
+            border-radius: 15px;
+            padding: 15px;
         }
 
         .form-control:focus {
-            background-color: rgba(255,255,255,0.12);
-            box-shadow: 0 0 0 0.2rem rgba(0, 212, 196, 0.3);
+            background: rgba(255,255,255,0.1);
+            border-color: var(--accent-color);
+            box-shadow: none;
             color: white;
         }
 
-        textarea::placeholder,
-        input::placeholder {
-            color: #c7f3f0 !important;
-        }
-
-        /* FOOTER */
         footer {
-            background-color: #002f2f;
-            padding: 30px 0;
+            padding: 50px 0;
+            opacity: 0.7;
         }
-
-        footer a {
-            font-size: 20px;
-            transition: 0.3s;
-        }
-
-        footer a:hover {
-            color: #00d4c4 !important;
-            transform: scale(1.2);
-        }
-
-        /* LIGHT SECTION */
-        .bg-light-custom {
-            background-color: #062f2f;
-        }
-
-        h2 {
-            font-weight: 700;
-            margin-bottom: 30px;
-        }
-
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#">MojePortfolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">O mně</a></li>
-                <li class="nav-item"><a class="nav-link" href="#projects">Projekty</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
-            </ul>
+        <a class="navbar-brand fw-bold" href="#">PORTFOLIO.</a>
+        <div class="ms-auto">
+            <a href="#contact" class="btn btn-outline-light btn-sm rounded-pill px-4">Napište mi</a>
         </div>
     </div>
 </nav>
 
 <section class="hero text-center">
     <div class="container">
-        <img src="img/profil.jpg" class="mb-4" alt="Profilová fotka">
-        <h1>Tvoje Jméno</h1>
-        <p class="lead">Web Developer | Designer | Freelancer</p>
-        <a href="#projects" class="btn btn-custom mt-4">Moje práce</a>
+        <span class="badge rounded-pill bg-dark border border-secondary mb-3 px-3 py-2 text-uppercase">Kreativní Vývojář</span>
+        <h1>Moje Projekty</h1>
+        <p class="lead text-secondary mx-auto mt-3" style="max-width: 600px;">
+            Specializuji se na tvorbu moderních webových aplikací. Zde je výběr mých nejlepších prací za poslední rok.
+        </p>
     </div>
 </section>
 
-<section id="about" class="section-padding">
+<section id="projects" class="pb-5">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <h2>O mně</h2>
-                <p>Jsem moderní webový vývojář se zaměřením na čistý design, výkon a uživatelský zážitek.</p>
-                <p>Specializuji se na HTML, CSS, Bootstrap a JavaScript.</p>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Project 1">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge badge-tech">React</span>
+                            <span class="badge badge-tech">API</span>
+                        </div>
+                        <h4 class="fw-bold">Crypto Dashboard</h4>
+                        <p class="text-secondary small">Real-time sledování kryptoměn s interaktivními grafy a notifikacemi.</p>
+                        <a href="#" class="btn btn-accent w-100 mt-3">Detail projektu</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-                <div class="progress mb-3">
-                    <div class="progress-bar" style="width: 90%">HTML 90%</div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Project 2">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge badge-tech">UI/UX</span>
+                            <span class="badge badge-tech">Bootstrap</span>
+                        </div>
+                        <h4 class="fw-bold">Eco Landing Page</h4>
+                        <p class="text-secondary small">Čistý, udržitelný design pro startup zaměřený na ekologii.</p>
+                        <a href="#" class="btn btn-accent w-100 mt-3">Detail projektu</a>
+                    </div>
                 </div>
-                <div class="progress mb-3">
-                    <div class="progress-bar" style="width: 85%">CSS 85%</div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Project 3">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge badge-tech">Next.js</span>
+                            <span class="badge badge-tech">Stripe</span>
+                        </div>
+                        <h4 class="fw-bold">E-commerce řešení</h4>
+                        <p class="text-secondary small">Kompletní e-shopová platforma s integrovanou platební bránou.</p>
+                        <a href="#" class="btn btn-accent w-100 mt-3">Detail projektu</a>
+                    </div>
                 </div>
-                <div class="progress mb-3">
-                    <div class="progress-bar" style="width: 75%">JavaScript 75%</div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1551288049-bbbda536639a?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Project 4">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge badge-tech">SASS</span>
+                            <span class="badge badge-tech">JS</span>
+                        </div>
+                        <h4 class="fw-bold">Data Analytics Tool</h4>
+                        <p class="text-secondary small">Nástroj pro vizualizaci firemních dat v přehledných tabulkách.</p>
+                        <a href="#" class="btn btn-accent w-100 mt-3">Detail projektu</a>
+                    </div>
                 </div>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 70%">Bootstrap 70%</div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Project 5">
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="mb-2">
+                            <span class="badge badge-tech">WordPress</span>
+                        </div>
+                        <h4 class="fw-bold">Travel Blog</h4>
+                        <p class="text-secondary small">Custom šablona pro cestovatelský portál s mapami.</p>
+                        <a href="#" class="btn btn-accent w-100 mt-3">Detail projektu</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="projects" class="section-padding bg-light-custom">
+<section class="about-mini">
     <div class="container text-center">
-        <h2>Projekty</h2>
-        <div class="row g-4 mt-4">
-            <div class="col-md-4">
-                <div class="card p-3 h-100">
-                    <img src="https://via.placeholder.com/400x250" class="card-img-top rounded-4" alt="">
-                    <div class="card-body">
-                        <h5>Projekt 1</h5>
-                        <p>Moderní responzivní web.</p>
-                        <a href="#" class="btn btn-custom btn-sm">Zobrazit</a>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h3 class="fw-bold mb-4">Krátce o mně</h3>
+                <p class="text-secondary">
+                    Jsem vývojář, který věří, že kód by měl být stejně krásný jako design. 
+                    Mám 5 let zkušeností a pracoval jsem pro klienty z celého světa. 
+                    Mým cílem je tvořit weby, které nejsou jen hezké, ale hlavně funkční.
+                </p>
+                <div class="d-flex justify-content-center gap-4 mt-4">
+                    <div class="text-center">
+                        <h4 class="fw-bold var(--accent-color)">15+</h4>
+                        <small class="text-secondary">Projektů</small>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-3 h-100">
-                    <img src="https://via.placeholder.com/400x250" class="card-img-top rounded-4" alt="">
-                    <div class="card-body">
-                        <h5>Projekt 2</h5>
-                        <p>UX/UI design aplikace.</p>
-                        <a href="#" class="btn btn-custom btn-sm">Zobrazit</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-3 h-100">
-                    <img src="https://via.placeholder.com/400x250" class="card-img-top rounded-4" alt="">
-                    <div class="card-body">
-                        <h5>Projekt 3</h5>
-                        <p>E-shop řešení.</p>
-                        <a href="#" class="btn btn-custom btn-sm">Zobrazit</a>
+                    <div class="text-center">
+                        <h4 class="fw-bold text-info">100%</h4>
+                        <small class="text-secondary">Spokojenost</small>
                     </div>
                 </div>
             </div>
@@ -231,16 +262,25 @@
     </div>
 </section>
 
-<section id="contact" class="section-padding text-center">
-    <div class="container">
-        <h2>Kontakt</h2>
-        <div class="row justify-content-center mt-4">
-            <div class="col-md-7">
-                <form>
-                    <input type="text" class="form-control mb-3" placeholder="Tvé jméno">
-                    <input type="email" class="form-control mb-3" placeholder="Email">
-                    <textarea class="form-control mb-3" rows="5" placeholder="Zpráva"></textarea>
-                    <button type="submit" class="btn btn-custom btn-lg">Odeslat</button>
+<section id="contact" class="py-5 my-5">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5">Pojďme něco vytvořit</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-start">
+                <form class="project-card p-4">
+                    <div class="mb-3">
+                        <label class="form-label small text-secondary">Jméno</label>
+                        <input type="text" class="form-control" placeholder="Jan Novák">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small text-secondary">E-mail</label>
+                        <input type="email" class="form-control" placeholder="jan@seznam.cz">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small text-secondary">Zpráva</label>
+                        <textarea class="form-control" rows="4" placeholder="O čem je váš projekt?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-accent w-100">Odeslat poptávku</button>
                 </form>
             </div>
         </div>
@@ -248,11 +288,13 @@
 </section>
 
 <footer class="text-center">
-    <div class="container">
-        <p class="mb-2">© 2026 Tvoje Jméno</p>
-        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+    <div class="container border-top border-secondary pt-4">
+        <div class="mb-3">
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-github"></i></a>
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-white mx-2 fs-4"><i class="bi bi-twitter-x"></i></a>
+        </div>
+        <p class="small text-secondary">© 2026 Vaše Jméno. Všechna práva vyhrazena.</p>
     </div>
 </footer>
 
