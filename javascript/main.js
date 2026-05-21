@@ -25,7 +25,7 @@ controls.dampingFactor = 0.05;
 // 4. Načtení 3D modelu
 const loader = new GLTFLoader();
 loader.load(
-  './zemegula2.glb', // Kostka umístěná vedle index.html
+  './krabica.glb', // Kostka umístěná vedle index.html
   function (gltf) {
     const cube = gltf.scene;
     
